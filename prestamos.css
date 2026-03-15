@@ -1,0 +1,113 @@
+:root {
+  --bg:       #3a4a5c;
+  --card:     #ffffff;
+  --accent:   #2563eb;
+  --accent2:  #1e40af;
+  --border:   #cbd5e1;
+  --label:    #64748b;
+  --text:     #1e293b;
+  --input-bg: #f8fafc;
+  --shadow:   0 4px 24px rgba(30,64,175,.12);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--bg);
+  background-image:
+    radial-gradient(ellipse at 20% 20%, rgba(37,99,235,.18) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 80%, rgba(15,23,42,.3) 0%, transparent 60%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+form {
+  background: var(--card);
+  border-radius: 20px;
+  padding: 2.5rem 2.8rem;
+  width: 100%;
+  max-width: 680px;
+  box-shadow: var(--shadow);
+}
+
+h1 {
+  font-size: 1.9rem;
+  font-weight: 600;
+  letter-spacing: .04em;
+  color: var(--accent2);
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid var(--border);
+}
+
+label {
+  display: block;
+  font-size: .72rem;
+  font-weight: 600;
+  color: var(--label);
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  margin-top: 1.2rem;
+  margin-bottom: .4rem;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="time"] {
+  font-family: 'Segoe UI', sans-serif;
+  font-size: .92rem;
+  color: var(--text);
+  background: var(--input-bg);
+  border: 1.5px solid var(--border);
+  border-radius: 10px;
+  padding: .6rem .9rem;
+  outline: none;
+  width: 100%;
+  transition: border-color .2s, box-shadow .2s;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+input[type="time"]:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(37,99,235,.15);
+  background: #fff;
+}
+
+input[type="radio"] {
+  accent-color: var(--accent);
+  width: 15px;
+  height: 15px;
+  margin-right: .3rem;
+  cursor: pointer;
+}
+
+input[type="submit"] {
+  display: block;
+  width: 100%;
+  margin-top: 2rem;
+  padding: .85rem;
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(37,99,235,.35);
+  transition: opacity .2s, transform .15s;
+}
+
+input[type="submit"]:hover {
+  opacity: .92;
+  transform: translateY(-1px);
+}
